@@ -25,8 +25,9 @@ AI-асистент P.U.L.S.E. Дані лежать на вашому комп�
    xattr -dr com.apple.quarantine /Applications/Pulsar.app
    ```
 
-5. **Вхід.** Зареєструйтеся у вікні входу (пошта й пароль або Google). Майстер запропонує підключити Redmine чи
-   Freshdesk або **спробувати демо** — Pulsar покаже все на прикладі даних, нічого не підключаючи.
+5. **Вхід.** Зареєструйтеся у вікні входу (пошта й пароль або Google). Майстер створить перший проєкт: назва,
+   джерела (Redmine, Freshdesk чи обидва), підключення, вибір проєктів, пробний синк за 90 днів і аналіз даних. Або
+   **спробуйте демо** — Pulsar покаже все на прикладі даних, нічого не підключаючи.
 
 ### Оновлення
 
@@ -42,7 +43,8 @@ Pulsar сам перевіряє нові версії: покаже систе�
 ### Що знадобиться
 
 - Ключ API Redmine чи Freshdesk для своїх даних (демо працює без нього).
-- Для P.U.L.S.E. — ключ Anthropic API або встановлений Claude Code.
+- Для P.U.L.S.E. — ключ Anthropic API або встановлений Claude Code. Інструменти підключень MCP P.U.L.S.E. викликає лише
+  з ключем API.
 
 ### Щось не так
 
@@ -71,8 +73,9 @@ You need an **Apple Silicon Mac** (M1 or newer). There are no builds for Windows
    xattr -dr com.apple.quarantine /Applications/Pulsar.app
    ```
 
-5. **Sign in.** Create an account in the sign-in window (email and password, or Google). The wizard offers to connect
-   Redmine or Freshdesk, or to **try the demo** — Pulsar shows everything on sample data without connecting anything.
+5. **Sign in.** Create an account in the sign-in window (email and password, or Google). The wizard creates your first
+   project: name, sources (Redmine, Freshdesk or both), connection, project selection, a 90-day trial sync and data
+   analysis. Or **try the demo** — Pulsar shows everything on sample data without connecting anything.
 
 ### Updates
 
@@ -88,7 +91,8 @@ Pulsar into Applications over the old one. Your data and settings stay in place.
 ### What you need
 
 - A Redmine or Freshdesk API key for your own data (the demo works without one).
-- For P.U.L.S.E. — an Anthropic API key or an installed Claude Code.
+- For P.U.L.S.E. — an Anthropic API key or an installed Claude Code. P.U.L.S.E. calls the tools of MCP connections
+  only with an API key.
 
 ### Something is wrong
 
