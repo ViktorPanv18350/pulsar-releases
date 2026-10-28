@@ -35,6 +35,23 @@ Pulsar сам перевіряє нові версії: покаже систе�
 — що змінилося. Кнопка качає інсталятор у «Завантаження» й відкриває його — перетягніть Pulsar у «Програми» поверх
 старого. Дані й налаштування лишаються на місці.
 
+### Що Pulsar передає моделі
+
+Модель Claude працює лише для P.U.L.S.E. і його функцій. Запити йдуть напряму в Anthropic з вашим ключем API або
+через ваш Claude Code — власного сервера Pulsar між вами й моделлю немає.
+
+- **Завжди:** підсумки метрик (години, кількості, частки) й імена людей у них.
+- **Лише зі згодою на тексти проєкту** (налаштування проєкту): назви й теми задач і звернень, до 3 цитат звернень чи
+  коментарів на категорію; для текстових задач — до 2 000 звернень по 500 символів.
+- **Ніколи:** значення текстових полів, ключі й токени.
+- **Дашборди з AI:** у режимі «лише каталог» модель бачить тільки назви метрик, у режимі «агреговані дані» — ще й
+  підсумки.
+- **Підключення MCP:** «P.U.L.S.E. напряму» — модель бачить результат інструмента в межах картки сервера (типово 50
+  рядків і 20 000 символів); «лише через MERIDIAN» — сирий результат бачить лише MERIDIAN, а P.U.L.S.E. — до 50 чисел
+  із цитатами й коротку примітку. Сервер із чутливими даними підключайте через MERIDIAN.
+- **Чати й висновки** лежать у папці проєкту. Чати в git не йдуть, а висновки (`pulse/notes`) — спільні нотатки
+  команди: якщо папка в git, вони потрапляють туди.
+
 ### Дізнаватися про релізи
 
 - Є акаунт GitHub — на цій сторінці **Watch → Custom → Releases**: лист на кожен реліз.
@@ -82,6 +99,23 @@ You need an **Apple Silicon Mac** (M1 or newer). There are no builds for Windows
 Pulsar checks for new versions by itself: you get a system notification and an “Update” pill at the bottom of the
 sidebar, and “About Pulsar” shows what changed. The button downloads the installer to Downloads and opens it — drag
 Pulsar into Applications over the old one. Your data and settings stay in place.
+
+### What Pulsar sends to the model
+
+The Claude model is used only by P.U.L.S.E. and its functions. Requests go straight to Anthropic with your API key or
+through your Claude Code — there is no Pulsar server between you and the model.
+
+- **Always:** metric totals (hours, counts, shares) and the names of people in them.
+- **Only with consent to project texts** (project settings): issue and ticket titles and subjects, up to 3 quotes from
+  tickets or comments per category; for text tasks, up to 2,000 tickets of 500 characters each.
+- **Never:** text field values, keys and tokens.
+- **AI dashboards:** in “catalog only” mode the model sees only metric names; in “aggregated data” mode it also sees
+  totals.
+- **MCP connections:** “P.U.L.S.E. directly” — the model sees the tool result within the server card limits (50 rows
+  and 20,000 characters by default); “only through MERIDIAN” — only MERIDIAN sees the raw result, and P.U.L.S.E. gets
+  up to 50 numbers with quotes and a short note. Connect a server with sensitive data through MERIDIAN.
+- **Chats and conclusions** live in the project folder. Chats do not go to git; conclusions (`pulse/notes`) are shared
+  team notes: if the folder is in git, they go there.
 
 ### Release notifications
 
